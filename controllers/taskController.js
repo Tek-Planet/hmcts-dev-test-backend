@@ -58,12 +58,31 @@ function deleteTask(req, res) {
   res.status(204).send();
 }
 
+function searchTasks(req, res) {
+  const db = getDB();
+  const { q } = req.query;
+
+  if (!q || q.trim() === "") {
+    return res.status(400).json({ error: "Search query is required" });
+  }
+
+  const tasks = db
+    .prepare(
+      `SELECT * FROM tasks 
+       WHERE userId = ? AND (title LIKE ? OR description LIKE ?)`
+    )
+    .all(req.user.id, `%${q}%`, `%${q}%`);
+
+  res.json(tasks);
+}
+
 module.exports = {
   getTasks,
   getTaskById,
   createTask,
   updateTask,
   deleteTask,
+  searchTasks
 };
 
 
