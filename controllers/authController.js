@@ -3,9 +3,9 @@ const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const { getDB } = require("../db");
 
-const SECRET = "supersecret"; // must match middleware
+require("dotenv").config();
+const SECRET = process.env.JWT_SECRET;
 
-// POST /api/register
 function register(req, res) {
   const db = getDB();
   const { name, email, password } = req.body;

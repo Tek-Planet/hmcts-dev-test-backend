@@ -9,7 +9,12 @@ const taskRoutes = require("./routes/taskRoutes");
 const app = express();
 
 initDB();
-app.use(cors());
+app.use(cors({
+    origin: ["http://localhost:8080", 'https://hmcts-dev-test-frontend.netlify.app'],  
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+  }));
+  
 app.use(express.json());
 
 

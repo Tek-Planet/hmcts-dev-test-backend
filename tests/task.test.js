@@ -9,7 +9,7 @@ let task;
 beforeAll(async () => {
   const db = getDB();
 
-  // Clean tables in correct order (tasks before users due to FK constraint)
+  // Clean tables in correct order 
   db.prepare("DELETE FROM tasks").run();
   db.prepare("DELETE FROM users").run();
 
