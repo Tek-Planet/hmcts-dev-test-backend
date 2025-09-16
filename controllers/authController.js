@@ -30,7 +30,6 @@ function register(req, res) {
   }
 }
 
-// POST /api/login
 function login(req, res) {
   const db = getDB();
   const { email, password } = req.body;
@@ -48,7 +47,6 @@ function login(req, res) {
   res.json({ token });
 }
 
-// GET /api/verify-token
 function verifyToken(req, res) {
   const authHeader = req.headers.authorization;
   if (!authHeader) return res.status(401).json({ valid: false });
@@ -62,7 +60,6 @@ function verifyToken(req, res) {
   }
 }
 
-// POST /api/forgot-password
 function forgotPassword(req, res) {
   const { email } = req.body;
   const db = getDB();
@@ -79,7 +76,6 @@ function forgotPassword(req, res) {
   res.json({ message: "Reset link generated", resetToken });
 }
 
-// POST /api/reset-password
 function resetPassword(req, res) {
   const { token, newPassword } = req.body;
   const db = getDB();
