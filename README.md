@@ -143,7 +143,9 @@ This repo is my submission for the HMCTS DTS Developer Technical Test. It covers
 - Unit and integration tests
 - Documentation (this README)
 
-## Live Demo  🚀 
-https://api.merchantgroup.com.ng
+## 🚀 Live Demo 
+This is hosted on render free hosting plan, the server might take up to a minutes to spin up 
+
+https://hmcts-dev-test-backend.onrender.com
 
 
