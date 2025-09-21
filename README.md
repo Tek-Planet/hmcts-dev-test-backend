@@ -13,14 +13,14 @@ This project is a simple backend service built for the HMCTS DTS Developer Techn
 
 Clone the repo and install dependencies:
 ```bash
-git clone https://github.com/your-username/hmcts-task-api.git
+git clone https://github.com/Tek-Planet/hmcts-dev-test-backend.git
 cd hmcts-task-api
 npm install
 ```
 
 Start the dev server:
 ```bash
-npm start
+npm run dev
 ```
 
 API runs on **http://localhost:3000**
@@ -143,6 +143,7 @@ This repo is my submission for the HMCTS DTS Developer Technical Test. It covers
 - Unit and integration tests
 - Documentation (this README)
 
+## 🚀 Live Demo 
+https://api.merchantgroup.com.ng
 
-##  Live Demo
-https://hmcts-dev-test-backend.onrender.com/
+
