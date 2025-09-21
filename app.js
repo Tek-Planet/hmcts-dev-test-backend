@@ -20,7 +20,7 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send(
-     'Welcome to HMCTS Task Management API, If you are seeing this then you made IT :-) ' 
+     'Welcome to HMCTS Task Management API, If you are seeing this then it works :-)' 
     )
    })
 app.use("/api", authRoutes);
